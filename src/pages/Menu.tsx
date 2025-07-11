@@ -49,18 +49,20 @@ const Menu = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 overflow-x-hidden">
       <Navigation />
       
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Our Menu</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4 break-words">
+            Our Menu
+          </h1>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
             Discover our carefully crafted selection of dishes made with the finest ingredients
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {menuItems.map((item) => (
             <FoodCard key={item.id} item={item} />
           ))}

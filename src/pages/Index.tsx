@@ -31,16 +31,16 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 overflow-x-hidden">
       <Navigation />
       
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-orange-600 to-red-600 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6 animate-fade-in">
+      <div className="relative bg-gradient-to-r from-orange-600 to-red-600 text-white py-16 sm:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in break-words">
             Bite-Sized Bites
           </h1>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl mb-8 opacity-90 max-w-2xl mx-auto px-4">
             Delicious meals delivered fresh to your door. From Italian classics to exotic curries, 
             we bring the world's finest flavors directly to you.
           </p>
@@ -54,7 +54,7 @@ const Index = () => {
 
       {/* Features Section */}
       <div className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="p-6 rounded-lg hover:shadow-lg transition-shadow">
               <Utensils className="h-12 w-12 text-orange-600 mx-auto mb-4" />
@@ -77,16 +77,16 @@ const Index = () => {
 
       {/* Featured Meals */}
       <div className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-800">
             Featured Meals
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {featuredMeals.map((meal) => (
               <FoodCard key={meal.id} item={meal} />
             ))}
           </div>
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 sm:mt-12">
             <Link to="/menu">
               <Button variant="outline" size="lg" className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
                 View Full Menu
